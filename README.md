@@ -1,5 +1,3 @@
-Here's a README for the repository:
-
 # Privy Smart Wallet Next.js Starter
 
 This project is a Next.js starter application that demonstrates the integration of Privy Smart Wallets for signing and executing transactions on the Base and Base Sepolia networks.

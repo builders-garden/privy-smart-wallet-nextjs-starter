@@ -128,6 +128,18 @@ export default function Home() {
     setIsSignedMessageExpanded(!isSignedMessageExpanded);
   };
 
+  const handleLogout = () => {
+    // Reset all input fields
+    setMessage("");
+    setUsdcAmount("");
+    setRecipientAddress("");
+    setSignedMessage("");
+    setErrorMessage("");
+
+    // Call the Privy logout function
+    logout();
+  };
+
   useEffect(() => {
     if (user?.wallet?.address) {
       setEmbeddedWalletAddress(user.wallet.address);
@@ -251,7 +263,7 @@ export default function Home() {
                   radius="sm"
                   color="danger"
                   className="w-fit"
-                  onClick={() => logout()}
+                  onClick={handleLogout}
                   startContent={<LogOut className="w-4 h-4" />}
                 >
                   Logout
