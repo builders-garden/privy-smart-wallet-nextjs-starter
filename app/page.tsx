@@ -14,6 +14,7 @@ import {
   ChevronUp,
   LogOut,
   BookOpen,
+  Github,
 } from "lucide-react";
 import { useState, useCallback, useEffect } from "react";
 import { encodeFunctionData, erc20Abi, formatUnits, parseUnits } from "viem";
@@ -174,6 +175,19 @@ export default function Home() {
                 <div className="text-sm font-semibold">Resources</div>
                 <div className="flex flex-row gap-2">
                   <Link
+                    href="https://docs.privy.io/guide/react/wallets/smart-wallets/usage"
+                    target="_blank"
+                  >
+                    <Button
+                      radius="sm"
+                      size="sm"
+                      className="bg-black text-white"
+                      startContent={<Github className="w-4 h-4" />}
+                    >
+                      Github
+                    </Button>
+                  </Link>
+                  <Link
                     href="https://docs.privy.io/guide/react/wallets/smart-wallets/"
                     target="_blank"
                   >
@@ -215,7 +229,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-3xl lg:text-6xl font-black">
-                Privy Smart Wallets Starter
+                Privy AA Starter
               </div>
               <div className="text-md lg:text-lg">
                 This app demonstrates how to use Privy Smart Wallets to sign and

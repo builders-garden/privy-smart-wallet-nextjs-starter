@@ -1,42 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Here's a README for the repository:
+
+# Privy Smart Wallet Next.js Starter
+
+This project is a Next.js starter application that demonstrates the integration of Privy Smart Wallets for signing and executing transactions on the Base and Base Sepolia networks.
+
+## Features
+
+- Privy authentication and embedded wallets
+- Smart wallet integration
+- Signing messages
+- Sending USDC transactions
+- Chain switching between Base and Base Sepolia
+- Balance display for both embedded and smart wallets
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+yarn install
+```
+
+3. Set up your environment variables:
+
+Create a `.env.local` file in the root directory and add your Privy App ID:
+
+```
+NEXT_PUBLIC_PRIVY_APP_ID=your_privy_app_id_here
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/`: Contains the main application pages and layout
+- `components/`: Reusable React components
+- `lib/`: Utility functions and constants
+- `public/`: Static assets
+
+## Dependencies
+
+Key dependencies include:
+
+- Next.js
+- React
+- Privy SDK (@privy-io/react-auth, @privy-io/wagmi)
+- Wagmi
+- Viem
+- NextUI
+
+For a full list of dependencies, refer to the `package.json` file.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this starter:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Privy Documentation](https://docs.privy.io/)
+- [Privy Smart Wallets Documentation](https://docs.privy.io/guide/react/wallets/smart-wallets/)
+- [Wagmi Documentation](https://wagmi.sh/)
+- [NextUI Documentation](https://nextui.org/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+This project can be easily deployed on Vercel. For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# privy-smart-wallet-nextjs-starter
-# privy-smart-wallet-nextjs-starter
-# privy-smart-wallet-nextjs-starter
-# privy-smart-wallet-nextjs-starter
-# privy-smart-wallet-nextjs-starter
-# privy-smart-wallet-nextjs-starter
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
