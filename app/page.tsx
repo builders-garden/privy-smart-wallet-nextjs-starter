@@ -38,6 +38,7 @@ export default function Home() {
   const [usdcAmount, setUsdcAmount] = useState("");
   const [recipientAddress, setRecipientAddress] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const { login } = useLogin();
   const { client } = useSmartWallets();
@@ -73,6 +74,7 @@ export default function Home() {
   };
 
   const execTransaction = async () => {
+    setIsLoading(true);
     if (!client) {
       console.error("No smart account client found");
       return;
@@ -107,6 +109,7 @@ export default function Home() {
       console.error("Transaction failed:", error);
       setErrorMessage("Transaction failed. Please try again.");
     }
+    setIsLoading(false);
   };
 
   const copyToClipboard = useCallback(
@@ -482,6 +485,7 @@ export default function Home() {
                     color="primary"
                     onClick={() => execTransaction()}
                     startContent={<Send className="w-4 h-4" />}
+                    isLoading={isLoading}
                     className="w-full"
                     isDisabled={
                       !usdcAmount ||
