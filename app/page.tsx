@@ -24,6 +24,9 @@ import { formatEther } from "viem";
 
 export default function Home() {
   const { ready, authenticated, logout, user } = usePrivy();
+  const { login } = useLogin();
+  const { client } = useSmartWallets();
+
   const [message, setMessage] = useState("");
   const [copiedWallet, setCopiedWallet] = useState<string | null>(null);
   const [signedMessage, setSignedMessage] = useState("");
@@ -39,9 +42,6 @@ export default function Home() {
   const [recipientAddress, setRecipientAddress] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
-  const { login } = useLogin();
-  const { client } = useSmartWallets();
 
   const { switchChain } = useSwitchChain();
   const chainId = useChainId();
@@ -190,7 +190,7 @@ export default function Home() {
                 <div className="text-sm font-semibold">Resources</div>
                 <div className="flex flex-row gap-2">
                   <Link
-                    href="https://docs.privy.io/guide/react/wallets/smart-wallets/usage"
+                    href="https://github.com/builders-garden/privy-smart-wallet-nextjs-starter"
                     target="_blank"
                   >
                     <Button
